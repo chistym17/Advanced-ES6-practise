@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Phone Api</title>
+</head>
+<body>
+
+<div class="mb-4 mt-3 py-3 px-3 text-center ">
+
+<input type="text" placeholder="Search Here" class="input input-bordered w-full max-w-xs" id="search-input"/>
+
+<button onclick="search()" class="btn btn-primary " id="Search-btn">Search</button>
+
+<br>
+
+<div class="mt-10 text-center">
+
+<span class="loading loading-spinner loading-md text-center mt-3 hidden" id="loading"></span>
+
+
+
+</div>
+
+
+<div id="phone-container" class="grid grid-cols-3 mx-auto  gap-5 mt-3">
+
+
+
+</div>
+    
+
+<div>
+
+<button id="show-all" class="btn btn-primary text-center mt-4 hidden">Show All</button>
+
+<!-- Open the modal using ID.showModal() method -->
+<dialog id="show_phone" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Close</button>
+    </div>
+  </form>
+</dialog>
+
+
+</div>
+</body>
+
+<script src="js/phone.js"></script>
+</html>
